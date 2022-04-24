@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+:root {
+   --bold: 700;
+   --very-light-gray: #ddd;
+   --orange: #ffa500;
+   --very-dark-blue: #293f69;
+}
+
+* {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+}
+
+body {
+   background-color: #282c34;
+   color: var(--very-light-gray);
+   overflow: hidden;
+}
+
+h1 {
+   text-align: center;
+   margin-top: 50px;
+}
+
+.instruction {
+   font-size: 20px;
+   text-align: center;
+   margin: 20px 0 60px;
+}
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.drawing {
+   stroke: var(--very-light-gray);
+   stroke-width: 5px;
+   stroke-linecap: round;
+}
+
+.wrong-letters-container {
+   min-width: 160px;
+}
+
+.wrong-letters {
+   font-size: 20px;
+}
+
+.word {
+   text-align: center;
+   margin-top: 70px;
+}
+
+.letter-container {
+   display: inline-block;
+   min-width: 25px;
+   border-bottom: 3px solid var(--very-light-gray);
+   padding-bottom: 5px;
+   margin-right: 5px;
+}
+
+.letter {
+   font-size: 20px;
+   font-weight: var(--bold);
+   color: var(--orange);
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+.popup-container {
+   background-color: rgba(0, 0, 0, 0.7);
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+}
+
+.popup {
+   background-color: var(--very-dark-blue);
+   border-radius: 3px;
+   padding: 0 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   min-width: 400px;
+   min-height: 270px;
+}
+
+.result {
+   font-size: 22px;
+   font-weight: var(--bold);
+}
+
+.highlight {
+   color: var(--orange);
+}
+
+.btn {
+   background-color: #2980b9;
+   color: var(--very-light-gray);
+   cursor: pointer;
+   border: 1px solid var(--very-light-gray);
+   border-radius: 3px;
+   padding: 10px;
+   letter-spacing: 0.7px;
+   font-size: 16px;
+   font-weight: var(--bold);
+   transition: filter 300ms;
+}
+
+.btn:hover {
+   filter: brightness(80%);
+}
+
+.btn:active {
+   transform: scale(0.97);
+}
+
+.message-container {
+   display: flex;
+   justify-content: center;
+}
+
+.message {
+   background-color: var(--very-dark-blue);
+   position: absolute;
+   bottom: -56px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   padding: 15px;
+   transition: transform 300ms;
+}
+
+.visible {
+   transform: translateY(-56px);
+}

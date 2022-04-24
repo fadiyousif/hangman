@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link type="text/css" rel="stylesheet" href="./style.css" />
+
+      <title>Hangman</title>
+
+      <script src="./script.js" defer></script>
+   </head>
+   <body>
+      <h1>Hangman</h1>
+      <h2 class="instruction">Enter a letter to reveal the hidden word.</h2>
+
+      <div class="container">
+         <svg class="drawing" width="200" height="250">
+            <!-- ROD -->
+            <line x1="30" y1="220" x2="90" y2="220" />
+            <line x1="60" y1="20" x2="60" y2="220" />
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
+
+            <!-- HEAD -->
+            <circle
+               cx="140"
+               cy="65"
+               r="15"
+               fill="transparent"
+               class="figure-part"
+            />
+
+            <!-- TORSO -->
+            <line x1="140" y1="80" x2="140" y2="140" class="figure-part" />
+
+            <!-- ARMS -->
+            <line x1="140" y1="90" x2="155" y2="125" class="figure-part" />
+            <line x1="125" y1="125" x2="140" y2="90" class="figure-part" />
+
+            <!-- LEGS -->
+            <line x1="140" y1="140" x2="155" y2="180" class="figure-part" />
+            <line x1="140" y1="140" x2="125" y2="180" class="figure-part" />
+         </svg>
+
+         <div class="wrong-letters-container hidden">
+            <h3>Wrong:</h3>
+            <span class="wrong-letters"></span>
+         </div>
+      </div>
+
+      <div class="word">
+         <template>
+            <div class="letter-container">
+               <span class="letter hidden"></span>
+            </div>
+         </template>
+      </div>
+
+      <div class="popup-container hidden">
+         <div class="popup">
+            <h4 class="result">Correct!</h4>
+            <button class="btn">Play Again!</button>
+         </div>
+      </div>
+
+      <div class="message-container">
+         <p class="message">You have already entered this letter</p>
+      </div>
+   </body>
+</html>
