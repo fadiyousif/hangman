@@ -57,7 +57,7 @@ const hideElement = (element) => element.classList.add("hidden");
 const showMessage = () => message.classList.add("visible");
 const hideMessage = () => message.classList.remove("visible");
 
-const validateInput = (which, input, ctrlKey) => {
+const isValidInput = (which, input, ctrlKey) => {
    // don't register input if the ctrl key is pressed down
    if (ctrlKey) return false;
 
@@ -86,7 +86,7 @@ const handleInput = ({ which, key, ctrlKey }) => {
 
    const input = key.toLowerCase();
 
-   if (!validateInput(which, input, ctrlKey)) return;
+   if (!isValidInput(which, input, ctrlKey)) return;
 
    lettersEntered.push(input);
 
