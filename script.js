@@ -1,5 +1,7 @@
 const figureParts = Array.from(document.getElementsByClassName("figure-part"));
-const wrongLettersContainer = document.querySelector(".wrong-letters-container");
+const wrongLettersContainer = document.querySelector(
+   ".wrong-letters-container"
+);
 const wrongLetters = document.querySelector(".wrong-letters");
 const word = document.querySelector(".word");
 const template = document.querySelector("template");
@@ -22,7 +24,7 @@ const fetchWords = () => {
       .then((res) => res.json())
       .then((data) => {
          words.push(...data);
-         getHiddenWord(data);
+         getHiddenWord();
       })
       .catch((err) => console.error(err));
 };
